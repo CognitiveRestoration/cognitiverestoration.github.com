@@ -1,0 +1,5 @@
+temp/
+test/
+dist/
+components/
+.sass-cache/
