@@ -1,9 +1,0 @@
-{
-  "name": "scrolldeck.js",
-  "version": "0.0.0",
-  "commit": "646313d2f7e46f2277296f9cd21b0b064008d438",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/johnpolacek/scrolldeck.js.git"
-  }
-}
