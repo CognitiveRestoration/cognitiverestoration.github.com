@@ -1,0 +1,42 @@
+CACHE MANIFEST
+
+# Time: Tue Dec 04 2012 09:22:50 GMT-0500 (EST)
+# This manifest was created by confess.js, http://github.com/jamesgpearce/confess
+#
+# Retrieved URL: http://localhost:3501/
+# User-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#
+# Config:
+#  task: appcache
+#  userAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#  wait: 0
+#  consolePrefix: #
+#  verbose: true
+#  appcache:
+#   urlsFromDocument: true
+#   urlsFromRequests: false
+#   cacheFilter: .*
+#   networkFilter: null
+#  url: http://localhost:3501
+#  configFile: /usr/local/share/npm/lib/node_modules/yeoman/lib/support/confess.json
+
+CACHE:
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
+http://localhost:3501/app/images/glyphicons-halflings-white.png?1354630941
+http://localhost:3501/app/images/glyphicons-halflings.png?1354630941
+http://localhost:3501/images/grass-large.jpg
+http://localhost:3501/images/trainers.png
+http://www.google-analytics.com/ga.js
+images/3eec00ea.battery.jpg
+images/7d215947.credits.jpg
+images/878dad41.whatis-transparent-large.png
+images/c18ab9f2.venn.jpg
+images/c23c5f20.whatis-green.jpg
+images/cfbcd2ba.whatis.jpg
+images/f21dc09f.brain.jpg
+scripts/d748acb2.plugins.js
+scripts/vendor/cf69c6f2.modernizr.min.js
+styles/58b08296.main.css
+
+NETWORK:
+*
