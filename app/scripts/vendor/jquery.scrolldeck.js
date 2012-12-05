@@ -73,6 +73,9 @@
 					case 'unpin-it2':
 					  scrolldeck.controller.animate(anim, { duration: windowHeight/2, property:'top', start:windowHeight/2, end:windowHeight/9, pin:true });
 					  break;
+					case 'unpin-it3':
+					  scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'top', start:windowHeight/2, end:0, pin:true });
+					  break;
 					case 'cover-up':
 					  scrolldeck.controller.animate(anim, { delay: 0, duration: windowHeight, property:'top', start: windowHeight/2, end:-windowHeight/4 });
 					  // scrolldeck.controller.animate(anim, { delay: windowHeight, duration: windowHeight/2, property:'top', pin:true });
