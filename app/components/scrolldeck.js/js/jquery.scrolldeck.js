@@ -1,16 +1,16 @@
 /*
 	scrolldeck - jQuery scrolldeck to create a vertically scrolling presentation deck
 	by John Polacek (@johnpolacek)
-
+	
 	Dual licensed under MIT and GPL.
 */
 
 (function($) {
     $.scrolldeck = function(options) {
-
-
+		
+		
 		// VARS
-
+		
 		var currIndex = 0,
 			buttons,
 			slides,
@@ -18,7 +18,7 @@
 			sections = [],
 			windowHeight = $(window).height(),
 			i;
-
+		
 		var defaults = {
 			buttons: '.nav-button',
 			slides: '.slide',
@@ -26,21 +26,21 @@
 			easing: 'easeInOutExpo',
 			offset: 0
 		};
-
-
+		
+		
 		// INIT
-
+		
 		var scrolldeck = this;
 		scrolldeck.settings = {};
-
+			
 		var init = function() {
-
+			
 			scrolldeck.settings = $.extend({}, defaults, options);
-
+			
 			buttons = $(scrolldeck.settings.buttons);
 			slides = $(scrolldeck.settings.slides);
 			scrolldeck.controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
-
+			
 			// add animations with scrollorama
 			var anim;
 			// ANIMATE INS
@@ -68,7 +68,7 @@
 						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
 				}
 			}
-
+			
 			// ANIMATE BUILDS
 			for (i=0; i<$('.animate-build').length; i++) {
 				anim = $('.animate-build').eq(i);
@@ -92,32 +92,23 @@
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 				}
 			}
-
-			// Additional custom scrollorama animations not originally in scrolldeck.js
-			scrolldeck.controller.animate('#unpin',{ duration:500, property:'padding-top', start:400, pin:true });
-	    scrolldeck.controller.animate('#fade-in',{ delay: 400, duration: 300, property:'opacity', start:0 });
-	    scrolldeck.controller.animate('#fly-in',{ delay: 400, duration: 300, property:'left', start:-1400, end:0 });
-	    scrolldeck.controller.animate('#rotate-in',{ duration: 800, property:'rotate', start:720 });
-	    scrolldeck.controller.animate('#zoom-in',{ delay: 200, duration: 600, property:'zoom', start:8 });
-	    scrolldeck.controller.animate('#any',{ delay: 700, duration: 200, property:'opacity', start:0 });
-	    scrolldeck.controller.animate('#any',{ delay: 800, duration: 200, property:'letter-spacing', start:18 });
-
+			
 			// set slide and animation scrollpoints
 			scrollpoints = scrolldeck.controller.getScrollpoints();
-
+			
 			// if nav buttons, create array of section header slide indexes
 			for (i=0; i<buttons.length;i++)
 				sections.push(slides.index($($(buttons[i]).attr('href'))));
-
+			
 			// event handler for updating current slide index and current nav button
 			scrolldeck.controller.onBlockChange(function() {
 				// get slide index
 				currIndex = scrolldeck.controller.blockIndex;
-
+				
 				// then update nav
 				updateNav();
 			});
-
+			
 			// Nav button click event
 			buttons.on('click', function(e) {
 				e.preventDefault();
@@ -125,7 +116,7 @@
 				currIndex = slide.index();
 				scrollToSlide(slide);
 			});
-
+			
 			// Keyboard events
 			$(document).on('keydown', function(e){
 				// up/left arrow = scroll up
@@ -137,7 +128,7 @@
 					scrollToSlide(getNextScrollpoint());
 				}
 			});
-
+			
 			// if slides are images, assign height to auto for proportional scaling
 			for (i=0; i<slides.length; i++) {
 				var el = slides.eq(i);
@@ -145,20 +136,20 @@
 					el.css('height','auto');
 				}
 			}
-
+			
 			// if last slide is shorter than height of window, increase height
 			var lastSlide = slides.eq(slides.length-1);
 			if (lastSlide.outerHeight() < $(window).height()) {
 				lastSlide.height(lastSlide.height()+$(window).height()-lastSlide.outerHeight());
 			}
-
+			
 			updateNav();
 		};
-
-
-
+		
+		
+		
 		// PRIVATE FUNCTIONS
-
+		
 		function updateNav() {
 			if (buttons) {
 				buttons.removeClass('current');
@@ -173,7 +164,7 @@
 				}
 			}
 		}
-
+		
 		function scrollToSlide(slide) {
 			$(window)._scrollable().stop();
 			$(window).scrollTo(slide, {
@@ -182,15 +173,15 @@
 				offset: scrolldeck.settings.offset
 			});
 		}
-
+		
 		function getNextScrollpoint() {
 			return getScrollpoint(2);
 		}
-
+		
 		function getPrevScrollpoint() {
 			return getScrollpoint(-1);
 		}
-
+		
 		function getScrollpoint(n) {
 			var scrollTop = $(window).scrollTop();
 			// make temp dup scrollpoints array
@@ -201,10 +192,10 @@
 			points.sort(function(a,b){return a - b;});
 			return points[points.indexOf(scrollTop)+n];
 		}
-
-
+		
+		
 		// INIT
 		init();
     };
-
+     
 })(jQuery);
