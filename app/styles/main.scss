@@ -439,63 +439,65 @@ img {
 
 .photoslide {
   color: white;
-  height: 1300px;
+  height: 1200px;
+  height: 120rem;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding: 0;
   width: 100%;
-  margin-top: 50px;
-  margin-top: 5rem;
+  // margin-top: 50px;
+  // margin-top: 5rem;
 }
 
 #photos1 {
-  @extends .photoslide;
-  background: url(../images/olin1.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/olin1.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos2 {
-  @extends .photoslide;
-  background: url(../images/olin2.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/olin2.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos3 {
-  @extends .photoslide;
-  background: url(../images/duffield1.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/duffield1.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos4 {
-  @extends .photoslide;
-  background: url(../images/duffield2.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/duffield2.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos5 {
-  @extends .photoslide;
-  background: url(../images/mann1.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/mann1.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos6 {
-  @extends .photoslide;
-  background: url(../images/mann2.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/mann2.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos7 {
-  @extends .photoslide;
+  @extend .photoslide;
   background: url(../images/appel1.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos8 {
-  @extends .photoslide;
-  background: url(../images/appel2.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/appel2.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos9 {
-  @extends .photoslide;
+  @extend .photoslide;
   background: url(../images/PSB1.jpg) 50% 90% no-repeat fixed;
 }
 
 #photos10 {
-  @extends .photoslide;
-  background: url(../images/PSB2.jpg) 50% 0 no-repeat fixed;
+  @extend .photoslide;
+  background: url(../images/PSB2.jpg) 50% 50% no-repeat fixed;
 }
 
 #why1 {

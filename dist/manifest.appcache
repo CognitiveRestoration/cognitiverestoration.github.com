@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Wed Dec 05 2012 19:37:08 GMT-0500 (EST)
+# Time: Thu Dec 06 2012 13:19:40 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -22,8 +22,8 @@ CACHE MANIFEST
 
 CACHE:
 http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
-http://localhost:3501/app/images/glyphicons-halflings-white.png?1354743383
-http://localhost:3501/app/images/glyphicons-halflings.png?1354743383
+http://localhost:3501/app/images/glyphicons-halflings-white.png?1354767979
+http://localhost:3501/app/images/glyphicons-halflings.png?1354767979
 http://localhost:3501/images/02a69e66.appel2.jpg
 http://localhost:3501/images/1593fb42.PSB2.jpg
 http://localhost:3501/images/591e4176.duffield1.jpg
@@ -45,9 +45,9 @@ images/c18ab9f2.venn.jpg
 images/c23c5f20.whatis-green.jpg
 images/cfbcd2ba.whatis.jpg
 images/f21dc09f.brain.jpg
-scripts/b238eb7a.plugins.js
+scripts/05d49694.plugins.js
 scripts/vendor/cf69c6f2.modernizr.min.js
-styles/42a2a0c8.main.css
+styles/5387bfb8.main.css
 
 NETWORK:
 *
