@@ -9,7 +9,7 @@ task :build do
   repo = Git.open('.')
   repo.branch("master").checkout
   (Dir["*"] - [site]).each { |f| rm_rf(f) }
-  Dir["#{site}/*"].each {|f| mv(f, ".")}
+  Dir["#{site}/*"].each {|f| mv(f, ".", :force => true, :verbose => true)}
   rm_rf(site)
   Dir["**/*"].each {|f| repo.add(f) }
   repo.status.deleted.each {|f, s| repo.remove(f)}
