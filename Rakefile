@@ -13,9 +13,9 @@ task :build do
   rm_rf(site)
   Dir["**/*"].each {|f| repo.add(f) }
   repo.status.deleted.each {|f, s| repo.remove(f)}
-  message = ENV["MESSAGE"] || "Site updated at #{Time.now.est}"
+  message = ENV["MESSAGE"] || "Site updated at #{Time.now}"
   repo.commit(message)
-  repo.branch("source").checkout
+  repo.branch("original-master").checkout
 end
 
 desc "generate and deploy website"
