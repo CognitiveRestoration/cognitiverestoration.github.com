@@ -303,6 +303,15 @@ img {
   padding-left: 0px;
   padding-left: 0rem;
   text-indent: 400px;
+  @media (max-width: 920px) {
+    text-indent: 200px;
+  }
+  @media (max-width: 800px) {
+    text-indent: 150px;
+  }
+  @media (max-width: 680px) {
+    text-indent: 100px;
+  }
 }
 
 #what1 p#mental-transition, #what2 p#mental-transition {
