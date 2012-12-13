@@ -1,4 +1,21 @@
-@import "compass_twitter_bootstrap";
+// Custom Sass Variables
+
+// Font Sizes
+$font-size-p-small: 24px;
+$font-size-p-small-r: 2.4rem;
+
+// $font-size-p-big: $font-size-p-small;
+// $font-size-p-big-r: $font-size-p-small-r;
+
+$font-size-p-big: 36px;
+$font-size-p-big-r: 3.6rem;
+
+$font-size-p-title: 48px;
+$font-size-p-title-r: 4.8rem;
+
+
+@import "compass_twitter_bootstrap_awesome";
+@import "compass_twitter_bootstrap_responsive";
 
 /*
 Plugin: jQuery Parallax
@@ -139,8 +156,8 @@ html {
 body {
   background: #fff;
   font-family: "Arial Black", Arial, sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: $font-size-p-small;
+  font-size: $font-size-p-small-r;
   line-height: 1.4;
 }
 
@@ -159,26 +176,26 @@ body {
   background: white;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+// ul {
+//   list-style: none;
+//   padding: 0;
+// }
 
-h1 {
-  font-size: 60px;
-  font-size: 6rem;
-  padding: 0;
-}
+// h1 {
+//   font-size: 60px;
+//   font-size: 6rem;
+//   padding: 0;
+// }
 
-h2 {
-  font-size: 48px;
-  font-size: 4.8rem;
-}
+// h2 {
+//   font-size: 48px;
+//   font-size: 4.8rem;
+// }
 
 p, li {
   font-weight: 400;
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
 }
 
 a, a:visited {
@@ -194,9 +211,9 @@ li {
   padding: .4rem 0;
 }
 
-img {
-  width: 100%;
-}
+// img {
+//   width: 100%;
+// }
 
 #justify-text {
   text-align: justify;
@@ -238,6 +255,10 @@ img {
 
 /*------------------------  SLIDES  */
 
+.off-screen {
+  top: 1200px;
+}
+
 .container-fluid#no-padding {
    padding-right: 0px;
    padding-left: 0px;
@@ -247,14 +268,14 @@ img {
   position: relative;
   margin: 0;
   width: 100%;
-  height: 500px;
-  height: 50rem;
+  height: 600px;
+  height: 60rem;
   padding: 100px 0 200px;
   padding: 10rem 0 20rem;
   text-align: center;
 }
 
-.story{
+.story {
   margin: 0 auto;
   min-width: 980px;
   overflow: auto;
@@ -271,19 +292,24 @@ img {
   display: block;
 }
 
+#what1 img, #what4 img, #when img, #what6 img {
+  width: 100%;
+}
+
 #what1 {
-  padding: 150px 0 0px;
-  padding: 15rem 0 0rem;
+  padding: 150px 0 150px;
+  padding: 15rem 0 15rem;
   // background: url(../images/firstBG.jpg) 50% -75px no-repeat fixed;
-  color: white;
-  height: 0px;
+  color:  $black;
   margin: 0 auto;
+  height: 700px;
+  height: 70rem;
   // padding: 160px 0 0 0;
 }
 
 #what1 p, #what2 p {
-  font-size: 38px;
-  font-size: 3.8rem;
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
   // padding-left: 130px;
   text-align: left;
   padding-left: 50px;
@@ -291,75 +317,100 @@ img {
 }
 
 #what1 p#mental {
-  font-size: 38px;
-  font-size: 3.8rem;
-  padding-left: 0px;
-  padding-left: 0rem;
-}
-
-#what2 p#mental {
-  font-size: 38px;
-  font-size: 3.8rem;
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
   padding-left: 0px;
   padding-left: 0rem;
   text-indent: 400px;
-}
-
-#what1 p#mental-transition, #what2 p#mental-transition {
-  font-size: 38px;
-  font-size: 3.8rem;
-  padding-left: 50px;
-  padding-left: 5.0rem;
+  @media (max-width: 920px) {
+    text-indent: 200px;
+  }
+  @media (max-width: 800px) {
+    text-indent: 150px;
+  }
+  @media (max-width: 680px) {
+    text-indent: 100px;
+  }
 }
 
 #mental-pin {
   height: 500px;
 }
 
-#what2 {
-  padding: 0px 0 0px;
-  padding: 0rem 0 0rem;
-  margin-top: 400px;
-  margin-top: 40rem;
-  // background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
-  // color: white;
-  // height: 1300px;
-  // margin: 0 auto;
-  // overflow: hidden;
-  // padding: 0;
-}
+// #what2 {
+//   padding: 0px 0 0px;
+//   padding: 0rem 0 0rem;
+//   margin-top: 400px;
+//   margin-top: 40rem;
+//   // background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+//   // color: white;
+//   // height: 1300px;
+//   // margin: 0 auto;
+//   // overflow: hidden;
+//   // padding: 0;
+// }
 
-#what2 .bg {
-  background: url(../images/trainers.png) 50% 0 no-repeat fixed;
+// #what2 .bg {
+//   background: url(../images/trainers.png) 50% 0 no-repeat fixed;
+//   height: 1300px;
+//   margin: 0 auto;
+//   padding: 0;
+//   position: absolute;
+//   width: 900px;
+//   z-index: 200;
+// }
+
+#forest-info {
+  background: url(../images/forest1.jpg) 50% 0 no-repeat fixed;
+  color: white;
   height: 1300px;
-  margin: 0 auto;
+  overflow: hidden;
   padding: 0;
-  position: absolute;
-  width: 900px;
-  z-index: 200;
+  width: 100%;
+  padding-top: 50px;
+  padding-top: 5rem;
 }
 
-#what2 strong {
-  display: block;
-  font-size: 60px;
-  font-size: 6rem;
-  font-style: italic;
-  position: relative;
-  top: 6px;
-  top: .6rem;
-  letter-spacing: 3px;
-  letter-spacing: .3rem;
+#forest-info p {
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
+  color: white;
+  padding-top: 25px;
+  padding-top: 2.5rem;
 }
 
 #what3 {
-  padding: 120px 0 60px;
-  padding: 12rem 0 6rem;
-  margin-bottom: 30px;
-  margin-bottom: 3rem;
-  // background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
-  // color: white;
-  height: 650px;
-  // padding: 100px 0 0 0;
+  background: url(../images/grass-large.jpg) 50% 0 no-repeat fixed;
+  color: white;
+  height: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  padding-top: 75px;
+  padding-top: 7.5rem;
+}
+
+#what3 p {
+  font-size: $font-size-p-title;
+  font-size: $font-size-p-title-r;
+  color: white;
+  padding-top: 75px;
+  padding-top: 7.5rem;
+}
+
+#what3 .outline-it {
+  text-outline: 2px 2px $black;
+}
+
+#what3 small {
+  display: block;
+  font-size: $font-size-p-small;
+  font-size: $font-size-p-small-r;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: $font-size-p-small;
+  padding-bottom: $font-size-p-small-r;
 }
 
 #what4 {
@@ -370,67 +421,130 @@ img {
   overflow: hidden;
   padding: 0;
   width: 100%;
-  margin-top: 50px;
-  margin-top: 5rem;
+  padding-top: 25px;
+  padding-top: 2.5rem;
 }
 
 #what4 p {
-  font-size: 36px;
-  font-size: 3.6rem;
-  font-color: white;
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
+  color: white;
+  text-align: left;
+  padding-top: 50px;
+  padding-top: 5.0rem;
 }
 
-#what4 h2 {
-  font-size: 36px;
-  font-size: 3.6rem;
+#what4 img {
+  padding-top: 100px;
+  padding-top: 10rem;
 }
 
-// #what4 strong {
-//   display: block;
-//   font-size: 60px;
-//   font-size: 6rem;
-//   padding-top: 12px;
-//   padding-top: 1.2rem;
-// }
-
-#what4 small {
-  display: block;
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-weight: 400;
-  font-style: italic;
-  padding-bottom: 24px;
-  padding-bottom: 2.4rem;
-}
-
-#what5 {
-  padding: 30px 0 200px;
-  padding: 3rem 0 20rem;
+#city-view {
+  background: url(../images/map-green-buildings.jpg) 50% 0 no-repeat fixed;
+  color: white;
   height: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  padding-top: 50px;
+  padding-top: 5rem;
+}
+
+#city-view p {
+  font-size: $font-size-p-small;
+  font-size: $font-size-p-small-r;
+  color: white;
+  padding-top: 25px;
+  padding-top: 2.5rem;
+}
+
+
+
+
+#venn-di {
+  // background: url(../images/firstBG.jpg) 50% -75px no-repeat fixed;
+  color: $black;
+  height: 1200px;
+  margin: 0 auto;
+  // padding: 160px 0 0 0;
+}
+
+.fixed-top0-first {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+
+#venn-di img.resize-height-first {
+  position: relative;
+  height: 100%;
+}
+
+
+
+.fixed-top0 {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+
+#venn-di img.resize-height {
+  position: relative;
+  max-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#when {
+  padding: 80px 0 200px;
+  padding: 8rem 0 20rem;
   background: url(../images/grass-large.jpg) 50% 0 no-repeat fixed;
 }
 
-#what5 h2 {
-  font-size: 60px;
-  font-size: 6rem;
-  margin: 0;
+#when p {
+  font-size: $font-size-p-big;
+  font-size: $font-size-p-big-r;
+  color: $white;
+  text-align: left;
+  padding-top: 50px;
+  padding-top: 5.0rem;
 }
 
-#what5 p {
-  padding-left: 50px;
-  padding-left: 5.0rem;
+#when img {
+  padding-top: 100px;
+  padding-top: 10rem;
+}
+
+#city-view-2 {
+  background: url(../images/mapwithtext.jpg) 50% 0 no-repeat fixed;
+  color: white;
+  height: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  padding-top: 50px;
+  padding-top: 5rem;
 }
 
 #what6 {
   padding: 80px 0 200px;
   padding: 8rem 0 20rem;
   background: url(../images/grass-large.jpg) 50% 0 no-repeat fixed;
-}
-
-#what6 h2 {
-  font-size: 60px;
-  font-size: 6rem;
-  margin: 0;
 }
 
 #what6 p {
@@ -448,6 +562,11 @@ img {
   width: 100%;
   // margin-top: 50px;
   // margin-top: 5rem;
+}
+
+#photos-promo {
+  @extend .photoslide;
+  background: url(../images/lastyear.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos1 {
@@ -482,206 +601,27 @@ img {
 
 #photos7 {
   @extend .photoslide;
-  background: url(../images/appel1.jpg) 50% 50% no-repeat fixed;
+  background: url(../images/mann3.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos8 {
   @extend .photoslide;
-  background: url(../images/appel2.jpg) 50% 50% no-repeat fixed;
+  background: url(../images/appel1.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos9 {
   @extend .photoslide;
-  background: url(../images/PSB1.jpg) 50% 90% no-repeat fixed;
+  background: url(../images/appel2.jpg) 50% 50% no-repeat fixed;
 }
 
 #photos10 {
   @extend .photoslide;
+  background: url(../images/PSB1.jpg) 50% 90% no-repeat fixed;
+}
+
+#photos11 {
+  @extend .photoslide;
   background: url(../images/PSB2.jpg) 50% 50% no-repeat fixed;
-}
-
-#why1 {
-  padding: 100px 0 200px;
-  padding: 10rem 0 20rem;
-}
-
-#why1 small {
-  display: block;
-  width: 80%;
-  text-align: right;
-  padding-top: 10px;
-  padding-top: 1rem;
-  font-style: italic;
-  color: #666;
-}
-
-#why2 h2 {
-  margin: 10px;
-  margin: 1rem;
-  font-size: 36px;
-  font-size: 3.6rem;
-  font-style: italic;
-}
-
-#why2 p {
-  margin: 0;
-  padding: 0;
-}
-
-#who1 {
-  padding: 200px 0 240px;
-  padding: 20rem 0 24rem;
-}
-
-#who1 h1 {
-  margin: 0;
-}
-
-#who1 p {
-  font-size: 30px;
-  font-size: 3rem;
-}
-
-.who {
-  padding: 150px 0 200px;
-  padding: 15rem 0 20rem;
-}
-
-.who p, .who h2 {
-  margin: 0;
-}
-
-.who h2 {
-  font-size: 30px;
-  font-size: 3rem;
-}
-
-.who p, .who a {
-  font-size: 20px;
-  font-size: 2rem;
-}
-
-#who7 {
-  padding: 270px 0 270px;
-  padding: 27rem 0 27rem;
-}
-
-#when1 {
-  padding: 80px 0 200px;
-  padding: 8rem 0 20rem;
-}
-
-#when1 h1, #when1 h2 {
-  margin: 12px;
-  margin: 1.2rem;
-}
-
-#when1 h2 {
-  font-size: 36px;
-  font-size: 3.6rem;
-}
-
-#when1 ul  {
-  margin: 0;
-}
-
-#how1 small {
-  display: block;
-  color: #666;
-  font-style: italic;
-  width: 82%;
-  text-align: right;
-  padding-top: 10px;
-  padding-top: 1rem;
-}
-
-#how2 h2 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  line-height: 1;
-}
-
-#how2 strong {
-  display: block;
-  font-size: 60px;
-  font-size: 6rem;
-  padding-top: 2.4rem;
-}
-
-#how2 small {
-  display: block;
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-weight: 400;
-  font-style: italic;
-  padding-bottom: 24px;
-  padding-bottom: 2.4rem;
-}
-
-#how3 {
-  padding-top: 5rem;
-}
-
-.where h2 {
-  font-size: 30px;
-  font-size: 3rem;
-  margin: 0;
-}
-
-.where h3, .where p, .where a {
-  margin: 0;
-  font-size: 20px;
-  font-size: 2rem;
-}
-
-.where-block {
-  vertical-align: top;
-  display: inline-block;
-  width: 40%;
-  padding: 20px 0;
-  padding: 2rem 0;
-}
-
-#where1 {
-  padding: 150px 0 200px;
-  padding: 15rem 0 20rem;
-}
-
-#where2 {
-  padding: 60px 0 200px;
-  padding: 6rem 0 20rem;
-}
-
-#where3 {
-  padding: 60px 0 200px;
-  padding: 6rem 0 20rem;
-}
-
-#where3 a {
-  font-size: 36px;
-  font-size: 3.6rem;
-}
-
-#where3 .where-block {
-  vertical-align: top;
-  display: inline-block;
-  width: 40%;
-  padding: 24px 0 6px;
-  padding: 2.4rem 0 .6rem;
-  line-height: 1.2;
-}
-
-#where3 .where-block a {
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-
-#where4 a {
-  display: block;
-  font-size: 24px;
-  font-size: 2.4rem;
-  padding: 3px;
-  padding: .3rem;
 }
 
 #credits h3, #credits h4 {

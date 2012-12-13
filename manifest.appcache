@@ -1,7 +1,6 @@
 CACHE MANIFEST
 
-# Time: Thu Dec 06 2012 14:48:27 GMT-0500 (EST)
-
+# Time: Wed Dec 12 2012 22:05:58 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -22,33 +21,38 @@ CACHE MANIFEST
 #  configFile: /Users/Thomas/yeoman/cli/lib/support/confess.json
 
 CACHE:
-http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
-http://localhost:3501/app/images/glyphicons-halflings-white.png?1354821474
-http://localhost:3501/app/images/glyphicons-halflings.png?1354821474
 http://localhost:3501/images/02a69e66.appel2.jpg
 http://localhost:3501/images/1593fb42.PSB2.jpg
-http://localhost:3501/images/591e4176.duffield1.jpg
-http://localhost:3501/images/6f79c735.PSB1.jpg
-http://localhost:3501/images/87fae396.mann1.jpg
-http://localhost:3501/images/8dd1f072.appel1.jpg
+http://localhost:3501/images/20963ada.mapwithtext.jpg
+http://localhost:3501/images/24338d12.forest1.jpg
+http://localhost:3501/images/2f5e6e36.duffield1.jpg
+http://localhost:3501/images/72d3b919.PSB1.jpg
+http://localhost:3501/images/a146ffd9.duffield2.jpg
 http://localhost:3501/images/a96b1fe8.grass-large.jpg
-http://localhost:3501/images/bf0ae4a4.duffield2.jpg
+http://localhost:3501/images/c4895abf.mann1.jpg
+http://localhost:3501/images/e18d144a.mann3.jpg
+http://localhost:3501/images/e70391b5.olin1.jpg
+http://localhost:3501/images/e7f55adb.lastyear.jpg
 http://localhost:3501/images/ea544365.olin2.jpg
-http://localhost:3501/images/ece5a8ed.olin1.jpg
+http://localhost:3501/images/f4a17761.map-green-buildings.jpg
+http://localhost:3501/images/f529b55d.appel1.jpg
 http://localhost:3501/images/f6d26de7.mann2.jpg
-http://localhost:3501/images/trainers.png
-http://www.google-analytics.com/ga.js
+images/03dbd1b8.vennstart.jpg
+images/0973afe5.vennpostarrows.jpg
 images/254989b2.arrow.jpg
 images/2fe5a685.betalogo.png
-images/3eec00ea.battery.jpg
+images/33565096.vennfinal.jpg
 images/7d215947.credits.jpg
-images/c18ab9f2.venn.jpg
+images/ab7604da.vennarrows.jpg
 images/c23c5f20.whatis-green.jpg
+images/ccc104b2.whatis-white.png
 images/cfbcd2ba.whatis.jpg
 images/f21dc09f.brain.jpg
-scripts/05d49694.plugins.js
+images/f9b17c3a.vennempty.jpg
+scripts/fc708ff8.plugins.js
+scripts/vendor/8bc61845.jquery.min.js
 scripts/vendor/cf69c6f2.modernizr.min.js
-styles/9569186c.main.css
+styles/a5c85dbf.main.css
 
 NETWORK:
 *
